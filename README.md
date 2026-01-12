@@ -31,3 +31,36 @@ Các test case trong `StudentAnalyzerTest.java` đã bao phủ:
 - Trường hợp danh sách rỗng (`Collections.emptyList()`).
 - Trường hợp có điểm không hợp lệ (âm hoặc > 10).
 - Kiểm tra độ chính xác của số thực (delta).
+
+## Chương 3: Kiểm thử tự động End-to-End với Cypress
+Chương này thực hành kiểm thử tự động giao diện web (End-to-End Testing) trên trang [Swag Labs](https://www.saucedemo.com/) sử dụng framework Cypress.
+
+### Cấu trúc dự án
+Thư mục: `cypress-exercise/`
+- **Test Specs** (`cypress/e2e/`):
+    - `login_spec.cy.js`: Kịch bản đăng nhập (thành công/thất bại).
+    - `cart_spec.cy.js`: Kịch bản thêm/xóa sản phẩm và sắp xếp.
+    - `checkout_spec.cy.js`: Kịch bản thanh toán.
+
+### Các kịch bản kiểm thử (Test Scenarios)
+1. **Đăng nhập (Login)**:
+   - Đăng nhập thành công với `standard_user`.
+   - Kiểm báo lỗi khi nhập sai thông tin.
+
+2. **Giỏ hàng (Cart)**:
+   - Thêm sản phẩm vào giỏ hàng.
+   - Sắp xếp sản phẩm (Giá thấp -> cao).
+   - **(Bài tập thêm)** Xóa sản phẩm khỏi giỏ hàng.
+
+3. **Thanh toán (Checkout)**:
+   - **(Bài tập thêm)** Quy trình thanh toán đầy đủ: Giỏ hàng -> Checkout -> Điền thông tin -> Xác nhận.
+
+### Hướng dẫn chạy
+Mở terminal tại thư mục `cypress-exercise` và chạy lệnh:
+```bash
+npx cypress open
+```
+Hoặc chạy ngầm (headless):
+```bash
+npx cypress run
+```
