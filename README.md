@@ -5,8 +5,7 @@
 Chương này tập trung vào việc rèn luyện và kiểm tra mắt thẩm mỹ cũng như khả năng phát hiện lỗi trong thiết kế giao diện người dùng (UI).
 - **Hoạt động**: Thực hiện bài test trên trang Can't Unsee.
 - **Kết quả**: Số điểm em đạt được là **7180 điểm**.
-- **Minh chứng**: Xem hình ảnh <img width="1895" height="969" alt="Screenshot 2026-01-05 142553" src="https://github.com/user-attachments/assets/ff4c9063-4723-4e60-b579-cbc409402ea4" />
-42553.png`.
+- **Minh chứng**: Xem hình ảnh <img width="1895" height="969" alt="Screenshot 2026-01-05 142553" src="https://github.com/user-attachments/assets/ff4c9063-4723-4e60-b579-cbc409402ea4" />.
 
 ## Chương 2: Kiểm thử đơn vị (Unit Testing)
 Chương này mô tả quá trình xây dựng và kiểm thử lớp xử lý dữ liệu sinh viên `StudentAnalyzer` bằng Java và JUnit 5.
@@ -66,3 +65,4 @@ Hoặc chạy ngầm (headless):
 npx cypress run
 
 ```
+
