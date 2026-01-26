@@ -64,3 +64,34 @@ Hoặc chạy ngầm (headless):
 ```bash
 npx cypress run
 ```
+
+## Chương 4: Kiểm thử hiệu năng với JMeter
+Chương này thực hiện kiểm thử hiệu năng cho website [VnExpress](https://vnexpress.net) sử dụng công cụ Apache JMeter.
+
+### Cấu trúc thư mục
+Thư mục: `jmeter/`
+- **Test Plan**: `vnexpress_test_plan.jmx` (Chứa 3 Thread Group: Cơ bản, Tải nặng, Tùy chỉnh).
+- **Báo cáo chi tiết**: `readme.md` (Phân tích kết quả và biểu đồ).
+
+### Các kịch bản kiểm thử
+1. **Thread Group 1 (Cơ bản)**: 10 Users, 5 Loop, truy cập Trang chủ.
+2. **Thread Group 2 (Tải nặng)**: 50 Users, Ramp-up 30s, truy cập Trang chủ & Số hóa.
+3. **Thread Group 3 (Tùy chỉnh)**: 20 Users, chạy trong 60s, truy cập Thể thao & Du lịch.
+
+### Cách chạy kiểm thử
+1. Mở JMeter.
+2. Open file `jmeter/vnexpress_test_plan.jmx`.
+3. Nhấn Start để chạy và xem kết quả tại **View Results Tree** và **Summary Report**.
+
+### Minh chứng kết quả
+Dưới đây là hình ảnh cấu hình và kết quả chạy kiểm thử:
+
+**1. Cấu hình HTTP Request Defaults**:
+![HTTP Request Defaults](jmeter/images/http_request_defaults.png)
+
+**2. Kết quả View Results Tree**:
+![View Results Tree](jmeter/images/view_results_tree.png)
+
+**3. Báo cáo Summary Report**:
+![Summary Report](jmeter/images/summary_report.png)
+
