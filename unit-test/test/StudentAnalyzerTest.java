@@ -45,7 +45,8 @@ class StudentAnalyzerTest {
     void testCount_InvalidScores_AreIgnored() {
         // Invalid scores (< 0 or > 10) should be ignored even if >= 8
         // 11.0 (Invalid), -5.0 (Invalid), 20.0 (Invalid)
-        List<Double> scores = Arrays.asList(11.0, -5.0, 20.0);
+        // Precision check: 10.000000001 is slightly > 10, so it must be Invalid
+        List<Double> scores = Arrays.asList(11.0, -5.0, 20.0, 10.000000001);
         assertEquals(0, analyzer.countExcellentStudents(scores));
     }
 
