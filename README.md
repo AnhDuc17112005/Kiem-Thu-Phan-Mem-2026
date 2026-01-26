@@ -32,6 +32,19 @@ Các test case trong `StudentAnalyzerTest.java` đã bao phủ:
 - Trường hợp có điểm không hợp lệ (âm hoặc > 10).
 - Kiểm tra độ chính xác của số thực (delta).
 
+### Hướng dẫn chạy kiểm thử
+Mở terminal tại thư mục `unit-test/` và chạy các lệnh sau:
+
+1. **Biên dịch mã nguồn**:
+   ```bash
+   javac -d out -cp junit-platform-console-standalone-1.10.0.jar src/StudentAnalyzer.java test/StudentAnalyzerTest.java
+   ```
+
+2. **Chạy kiểm thử**:
+   ```bash
+   java -jar junit-platform-console-standalone-1.10.0.jar -cp out --scan-classpath
+   ```
+
 ## Chương 3: Kiểm thử tự động End-to-End với Cypress
 Chương này thực hành kiểm thử tự động giao diện web (End-to-End Testing) trên trang [Swag Labs](https://www.saucedemo.com/) sử dụng framework Cypress.
 
