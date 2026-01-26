@@ -25,12 +25,21 @@ Chương này mô tả quá trình xây dựng và kiểm thử lớp xử lý d
    - Bỏ qua các điểm không hợp lệ.
    - Trả về 0 nếu không có điểm hợp lệ nào.
 
-### Kết quả kiểm thử
-Các test case trong `StudentAnalyzerTest.java` đã bao phủ:
-- Trường hợp danh sách điểm bình thường.
-- Trường hợp danh sách rỗng (`Collections.emptyList()`).
-- Trường hợp có điểm không hợp lệ (âm hoặc > 10).
-- Kiểm tra độ chính xác của số thực (delta).
+### Kết quả kiểm thử (Cập nhật Version 2)
+Bộ kiểm thử đã được nâng cấp lên **Version 2** với độ bao phủ toàn diện (12 Test Cases), bao gồm:
+
+1. **Nhóm tính năng Đếm sinh viên giỏi (`countExcellentStudents`)**:
+   - Kiểm tra danh sách `null` và rỗng.
+   - **Kiểm thử giá trị biên**: Test kỹ tại các ngưỡng 7.9, 8.0, 8.1 để đảm bảo logic so sánh chính xác tuyệt đối.
+   - **Xử lý dữ liệu rác**: Loại bỏ điểm âm, điểm > 10, chỉ đếm điểm hợp lệ.
+
+2. **Nhóm tính năng Tính điểm trung bình (`calculateValidAverage`)**:
+   - Xử lý mượt mà danh sách chứa toàn điểm lỗi (trả về 0, không lỗi chia cho 0).
+   - Tính toán đúng khi danh sách hỗn hợp (điểm đúng xen kẽ điểm sai).
+   - Kiểm tra độ chính xác số thực (Delta).
+
+> **Cải tiến so với V1**: Version 2 bổ sung kiểm thử biên (Boundary Value Analysis) và phân lập lỗi tốt hơn, đảm bảo code xử lý đúng mọi trường hợp ngoại lệ.
+
 
 ### Hướng dẫn chạy kiểm thử
 Mở terminal tại thư mục `unit-test/` và chạy các lệnh sau:
